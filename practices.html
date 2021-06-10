@@ -7,17 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <style>
-        table {
-            border: 1px solid #ccc;
-        }
-        tr {
-            border: 1px solid #ccc;
-            padding: 20px;
-        }
-        td {
-            border: 1px solid #ccc;
-            padding: 20px 60px;
-        }
+   
 
     </style>
 </head>
@@ -25,9 +15,9 @@
     <div class="container">
         <div class="row">
 
-            <table>
+            <table class="table table-bordered mt-5x">
                 <tr>
-                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox"></td>
                     <td>Elon Musk</td>
                     <td>0912345678</td>
                     <td>Elon Musk@gmail.com</td>
@@ -39,7 +29,7 @@
                     <td>Mark Zuckerberg@gmail.com</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" checked></td>
+                    <td><input type="checkbox"></td>
                     <td>Bill Gates</td>
                     <td>0912345678</td>
                     <td>Bill Gates@gmail.com</td>
@@ -57,8 +47,10 @@
     
      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
-            $(':checked').parent().css('background','lightblue');
-            $(':checked').parent().nextAll().css('background','lightblue');
+            $('input').click(function(){
+                console.log('hi',$(this));
+            })
+            // $(':checked').parent().nextAll().css('background','lightblue');
         </script>
 </body>
 </html>

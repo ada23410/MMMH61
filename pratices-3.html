@@ -12,27 +12,38 @@
     <div class="row">
         <form>
             <div class="form-group">
-                <label for="formGroupExampleInput">User Name</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Jhon">
+                <label for="formGroupExampleUsername">User Name</label>
+                <input type="text" class="form-control" id="formGroupExampUsername" placeholder="Enter your name" value='John'>
               </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Jhon@gmail.com">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value="John@gmail.com">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" style='-webkit-text-security: circle' placeholder="Password">
+              <input type="password" class="form-control" id="exampleInputPassword1" style='-webkit-text-security: circle' placeholder="Password" value="">
             </div>
-            <button type="button" value='input' class="btn btn-primary">Auto input</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" value='input' class="btn btn-primary auto-input">Auto input</button>
+            <button type="submit" class="btn btn-primary submit">Submit</button>
           </form>
     </div>
 </div>
 
  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
+      // 新增一個 click 事件監聽器
+      $('.auto-input').click(function () {
+        // function 裡面都會自帶一個內建 event 參數代表這個事件
+        console.log('hi');
+        console.log(event);
+        $('#exampleInputUsername').val('John');
+      });
 
+      $('.submit').click(function () {
+        event.preventDefault();
+        console.log('hi submit');
+      });
     </script>
     
 </body>
