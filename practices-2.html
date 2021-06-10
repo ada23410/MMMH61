@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        table {
+            background-color: coral;
+            border: 1px solid #ccc;
+        }
+        tr {
+            border: 1px solid #ccc;
+
+        }
+        td {
+            padding: 20px 50px;
+            border: 1px solid #ccc;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <table>
+                <tr class="a1">
+                   <td>box1</td>
+                   <td>box2</td>
+                   <td>box3</td>
+                   <td>box4</td>
+                </tr>
+                <tr class="a2">
+                    <td>box5</td>
+                    <td>box6</td>
+                    <td>box7</td>
+                    <td>box8</td>
+                 </tr>
+                 <tr class="a3">
+                    <td>box9</td>
+                    <td>box10</td>
+                    <td>box11</td>
+                    <td>box12</td>
+                 </tr>
+                 <tr class="a4">
+                    <td>box13</td>
+                    <td>box14</td>
+                    <td>box15</td>
+                    <td>box16</td>
+                 </tr>
+                
+            </table>
+        </div>
+    </div>
+    
+
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            $('td').eq(6).css('background','lightblue').nextAll().css('background','lightblue');
+            $('.a2').nextAll().css('background','lightblue');
+
+        </script>
+</body>
+</html>
