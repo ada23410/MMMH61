@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            // 函數名字
+            // function abc(){
+            //     console.log('abc');
+
+            // }
+
+            // abc();
+
+            // 匿名函式
+            // 通常用在執行一次，而且會立即執行
+            // (function () {
+            //     console.log('no name');
+            // })();
+
+            // ES6 宣告函式的方式改變，用 const 去宣告一個匿名函式
+            const def = function () {
+                console.log('def');
+            };
+
+            // def();
+
+            // function 後面的小括號，到底要幹嘛？
+            // 其實是因為，裡面可以用來傳遞參數使用，不傳值進去就留空。
+            // 假如我這邊寫一個加法的 function ，傳進來的直會自己相加得到結果。
+
+            // function myFunc(a,b) {
+            //     console.log(a);
+            //     console.log(b);
+            //     console.log(a+b);
+            // }
+
+            // myFunc(123,456)
+
+            // function minus(a,b) {
+            //     console.log(a);
+            //     console.log(b);
+            //     console.log(a-b);
+            // }
+
+            // minus(10,5);
+            // minus(20,5);
+
+            // function mltiple(a,b) {
+            //     console.log(a);
+            //     console.log(b);
+            //     console.log(a*b);
+            // }
+
+            // mltiple(10,5);
+            // mltiple(20,5);
+
+            // function divide(a,b) {
+            //     console.log(a);
+            //     console.log(b);
+            //     console.log(a/b);
+            // }
+
+            // divide(10,5);
+            // divide(20,5);
+
+
+            // return回傳，把一個計算後的結果回傳回去。
+            // 所以我們必須要有一個變數去承接這個回傳的結果。
+            // 在js命名通常用小駝峰，開頭小寫，之後每個單字字首大寫
+
+            function returnAddResult (a,b) {
+                return(a+b);
+            }
+
+            const myResult = returnAddResult(1,2);
+            console.log(myResult);
+            const myResult2 =returnAddResult(3,4);
+            console.log(myResult2);
+            console.log(myResult + myResult2);
+
+            // ES6 箭頭函式，我們用（) => 來表示 Function 的簡稱
+            // Jquery 是不接受箭頭函式的寫法
+
+            function normalFunc () {
+                console.log('normalFunc');
+            }
+            
+            const normalFunc = function () {
+                console.log('normalFunc 2');
+            }
+            const arrowFunc = () => {
+                console.log('arrowFunc');
+            }
+
+            arrowFunc();
+
+            // 基本上是簡化的極致做法，非常多簡寫
+            // 箭頭函式的return，如果只有一行，可以省略return跟大括號。
+            const myAdd = (a,b) => a + b;
+
+            const myResult3 = myAdd(1,2);
+            console.log(myResult3);
+
+            // 箭頭函式如果只有一個參數，也可以省略小括號
+            const 
+
+        </script>
+    
+</body>
+</html>

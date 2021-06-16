@@ -17,25 +17,27 @@
 
             <table class="table table-bordered mt-5x">
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" class="jq-checked"></td>
                     <td>Elon Musk</td>
                     <td>0912345678</td>
                     <td>Elon Musk@gmail.com</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" class="jq-checked"></td>
                     <td>Mark Zuckerberg</td>
                     <td>0912345678</td>
                     <td>Mark Zuckerberg@gmail.com</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td>
+                        <input type="checkbox" class="jq-checked">
+                    </td>
                     <td>Bill Gates</td>
                     <td>0912345678</td>
                     <td>Bill Gates@gmail.com</td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox"></td>
+                    <td><input type="checkbox" class="jq-checked"></td>
                     <td>Larry Page</td>
                     <td>0912345678</td>
                     <td>Larry Page@gmail.com</td>
@@ -48,9 +50,33 @@
      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
             $('input').click(function(){
-                console.log('hi',$(this));
-            })
-            // $(':checked').parent().nextAll().css('background','lightblue');
+                // $(this)是 Jquery 的方法，可以使用 Jquery 的方法
+                // this 是原生 JS 物件，兩個方法不能互通使用
+                // $(this).parents('tr').css('background','lightblue');
+                // prop(property) 狀態，判斷現在畫面是否為 checked
+                // $(this).prop("checked");
+
+                // 條件判斷是，只要是 ture 就執行大括號裡面的動作
+                // if($(this).prop("checked")){
+                //     // 改變顏色
+                //     console.log('true');
+                //     $(this).parents('tr').css('background','lightblue');
+                // }
+                // else{
+                //     // 變回白色、變回透明、變回none
+                //     console.log('false');
+                //     $(this).parents('tr').css('background','white')
+                // }
+          
+                $('input').click(function(){
+                    $('tr').css('background','transparent');
+                    $('input:checked').closest('tr').css('background','lightblue');
+                })
+            });
+           
+      
+        
+    
         </script>
 </body>
 </html>

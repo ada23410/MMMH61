@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+    <button class="btn btn-primary">button</button>
+
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+        // 快速點擊兩次，實際上會觸發兩次
+          $('.btn').click(function(){
+              console.log('click');
+          });
+        // 如果想重複執行，要包在一個 function 裡面
+          $('.btn').dblclick(function(){
+              console.log('dblclick');
+
+            // 因為還沒執行 dblclick 事件的 function之前
+            // 不會綁定這個事件到.btn身上
+            // 變成你要等到使用者 dblclick btn 之後才綁定右鍵
+              $('.btn').contextmenu(function(){
+              console.log('contextmenu');
+          })
+          });
+
+        // 單純執行一次，沒辦法再呼叫
+        // 如要重複要放在 function裡面
+          console.log('dblclick3');
+
+        
+        //   coding style
+        // airbnb 推崇不加分號當結尾
+          $('.btn').mousedown(function(){
+              console.log('mousedown');
+          });
+
+          $('.btn').mouseup(function(){
+              console.log('mouseup');
+          });
+
+          $('.btn').mouseenter(function(){
+              console.log('mouseenter');
+              $(this).css('background-color','red')
+          });
+
+          $('.btn').mouseleave(function(){
+              console.log('mouseleave');
+          });
+
+        // hover包含mouseenter 和 mouseleave
+          $('.btn').hover(function(){
+              console.log('hover in');
+          }, function() {
+              console.log('hover leave');
+          });
+        
+        </script>
+</body>
+</html>

@@ -5,8 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p{color:red}
+        li{color:blue;}
+        .lili{font-weight:bold;color:red;}
+        #lili{font-weight:bold;color:red;}
+    </style>
 </head>
 <body>
+    <p title="你最喜歡的水果是。">你最喜歡的水果是？</p>
+        <ul>
+        <li title="蘋果汁">蘋果</li>
+        <li title="橘子汁" alt="123">橘子</li>
+        <li title="菠蘿汁">菠蘿</li>
+        </ul>
     
 
 
@@ -16,7 +28,8 @@
 
      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script>
-            
+            alert($("ul li:eq(1)").attr("title"));
+            alert($("ul li:eq(1)").attr("alt"));
         </script>
 </body>
 </html>

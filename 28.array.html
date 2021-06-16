@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            const myArray = ['第零個資料','第ㄧ個資料','第二個資料','第三個資料','第四個資料'];
+            console.log('myArray',myArray);
+            console.log('myArray[0]',myArray[0]);
+            console.log('myArray[1]',myArray[1]);
+
+
+            // 陣列裡面的陣列
+            const districArray = [     
+                ['七堵', '中正', '暖暖'],
+                ['中正', '大安', '信義'],
+                ['蘆洲', '三重', '新店'],
+            ];
+
+            // 二維陣列
+            console.log('districArray',districArray);
+            console.log('districArray[0][0]',districArray[0][0]);
+            console.log('districArray[1][1]',districArray[1][1]);
+            console.log('districArray[2][0]',districArray[2][0]);
+
+            // 關於陣列，JS有很多方法（method) 可以使用
+            // 通常都是為了要處理陣列裡面的每一筆的資料所以使用這些方法
+            // forEach, map, filter,......
+
+            // forEach 針對陣列跑迴圈，把裡面資料一筆一筆拿出來使用
+            // 迴圈的意思是：資料有幾筆，就會執行幾次 function
+            // element 就是每次迴圈拿的一筆資料，每次都不同筆，直到跑完迴圈
+            // 陣列（需要跑迴圈的陣列）.方法
+            // 以districtArray陣列維列，我們迴圈會執行三次，總共拿三次 element
+            districArray.forEach(function(element){
+                console.log('element',element);
+
+                element.forEach(function(item){
+                    console.log('item:',item);
+                })
+
+            });
+
+        </script>
+</body>
+</html>
